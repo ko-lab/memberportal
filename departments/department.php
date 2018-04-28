@@ -25,7 +25,7 @@ $response2     = mysqli_fetch_array($result2);
         <i class="fa fa-home"></i> Home
       </li>
       <li>
-        <i class="fa fa-fighter-jet"></i> Afdelingen
+        <i class="fa fa-fighter-jet"></i><a href="departments/departments.php"> Afdelingen</a>
       </li>
       <li>
         <i class="fa fa-fighter-jet"></i> <?php echo $response2['name']; ?>
