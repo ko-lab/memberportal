@@ -84,19 +84,10 @@ if ($username == Null) {
                 <a href="reminders/reminders.php"><i class="fa fa-fw fa-sticky-note"></i> Herineringen</a>
               </li>
               <li>
-                <a href="orders/orders.php"><i class="fa fa-fw fa-search"></i> Zoekertjes</a>
-              </li>
-              <li>
-                <a href="orders/orders.php"><i class="fa fa-fw fa-shopping-cart"></i> Spaceshop</a>
-              </li>
-              <li>
                 <a href="members/members.php"><i class="fa fa-fw fa-users"></i> Leden</a>
               </li>
               <li>
                 <a href="tools/tools.php"><i class="fa fa-fw fa-wrench"></i> Gereedschap</a>
-              </li>
-              <li>
-                <a href="orders/orders.php"><i class="fa fa-fw fa-wrench"></i> Workshops en evenementen</a>
               </li>
               <li>
                 <a href="departments/departments.php"><i class="fa fa-fw fa-fighter-jet"></i> Afdelingen</a>

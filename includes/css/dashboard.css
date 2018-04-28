@@ -1,0 +1,6 @@
+/* Global Styles */
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 0px;
+    }
+}
