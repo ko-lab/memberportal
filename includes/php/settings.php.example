@@ -7,16 +7,16 @@ $baseurl = "http://localhost/kolabportal/";  // base url
 $hostdb = "";  // MySQl server
 $userdb = "";  // MySQL user
 $passdb = "";  // MySQL password
-$namedb = "kolabportal";  // MySQL database name
+$namedb = "";  // MySQL database name
 
 // ldap settings
 
 $hostldap = ''; // Ldap host
-$portldap = '389'; // Ldap host
-$userldap = 'cn=adminuser,dc=internal,dc=ko-lab,dc=be'; // Ldap user
+$portldap = ''; // Ldap host
+$userldap = ''; // Ldap user
 $passldap = ''; // Ldap password
 
-$memberouldap = 'ou=members,dc=internal,dc=ko-lab,dc=be'; // Ldap user
+$memberouldap = ''; // Ldap user
 
 
 

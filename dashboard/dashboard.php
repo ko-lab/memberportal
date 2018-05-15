@@ -130,16 +130,9 @@ while ($row = mysqli_fetch_array($result1)) {
 
 echo '</div></div></div>';
 
-echo '<div class="col-lg-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title"><i class="fa fa-comments fa-fw"></i> Chat</h3></div><div class="panel-body">';
+echo '<div class="col-lg-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title"><i class="fa fa-bolt fa-fw"></i> Stroomteller</h3></div><div class="panel-body">';
 
-$strQuery1 = "SELECT title, text FROM notices ORDER BY idnotices DESC LIMIT 5;";
-$result1 = $dbhandle->query($strQuery1) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-
-while ($row = mysqli_fetch_array($result1)) {
-    
-    echo '<h2>' . $row['title'] . '</h2><div>' . $row['text'] . '</div>';
-    
-}
+echo "<iframe src='http://10.90.154.40/#realtime' style='width:100%;height:50vh'></iframe>";
 
 echo '</div></div></div></div>';
 

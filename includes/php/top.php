@@ -48,14 +48,6 @@ if ($username == Null) {
             <a class="navbar-brand" href="">Ko-lab Member portal</a>
           </div>
           <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> <b class="caret"></b></a>
-              <ul class="dropdown-menu alert-dropdown">
-                <li>
-                  <a href="settings/gebruikers.php">Gebruikers</a>
-                </li>
-              </ul>
-            </li>
             <li>
               <a href="help.php"><i class="fa fa-fw fa-question"></i></a>
             </li>

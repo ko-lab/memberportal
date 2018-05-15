@@ -8,11 +8,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Floris Van der krieken">
-	<title>Ko-lab Member portal</title>
-    <link href="<?php echo $baseurl; ?>includes/fonts/montserrat/montserrat.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $baseurl; ?>includes/fonts/lato/lato.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $baseurl; ?>includes/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <script src="<?php echo $baseurl; ?>includes/js/jquery-1.12.4.min.js"></script>
+    <title>Ko-lab Member portal</title>
+    <link href="<?php echo $baseurl; ?>includes/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $baseurl; ?>includes/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="<?php echo $baseurl; ?>includes/js/jquery-3.1.1.min.js"></script>
     <script src="<?php echo $baseurl; ?>includes/js/bootstrap.min.js"></script>
   </head>
   <body>
