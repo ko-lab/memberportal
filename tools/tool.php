@@ -26,7 +26,7 @@ $response2     = mysqli_fetch_array($result2);
         <i class="fa fa-home"></i> Home
       </li>
       <li>
-        <i class="fa fa-wrench"></i> Gereedschap
+        <i class="fa fa-wrench"></i><a href="tools/tool.php"> Gereedschap</a>
       </li>
       <li>
         <i class="fa fa-wrench"></i> <?php echo $response2['brandname'] . ' ' . $response2['modelnumber']; ?>

@@ -22,21 +22,19 @@ if (empty($password)) {
     goto wrongdata;
 } 
 
-$usernamecn = 'uid=' . $username . ',ou=members,dc=internal,dc=ko-lab,dc=be';
+$usernamecn = 'uid=' . $username . ',ou=members,dc=internal,dc=ko-lab,dc=space';
 
 if ($bind = ldap_bind($ldaplogin, $usernamecn, $password)) {
     
 	$filter = "(cn=" . $username . ")";
-	$attr = array("memberof","givenname","sn","uidNumber");
+	$attr = array("memberof","givenname","sn","uidNumber","postalCode");
 	
 	$result = ldap_search($ldaplogin, $memberouldap, $filter, $attr) or exit("Unable to search LDAP server");
 	$entries = ldap_get_entries($ldaplogin, $result);
 	$FirstName = $entries[0]['givenname'][0];
     $LastName = $entries[0]['sn'][0];
 	$userid = $entries[0]['uidNumber'][0];
-	
-    // start session
-    $Admin     = NULL ;
+	$Admin = $entries[0]['postalcode'][0];
     
     session_start();
     $_SESSION["username"]  = $username;
@@ -77,8 +75,6 @@ goto form;
 form:
 
 echo '<form role="form" action="' . $baseurl . 'account/login.php" method="post"><div class="form-group"><label for="username">Gebruikersnaam:</label><input type="username" name="username" class="form-control" required></div><div class="form-group"><label for="password">Wachtwoord:</label><input type="password" name="password" class="form-control" required></div><button type="submit" class="btn btn-default">Aanmelden</button></form>';
-
-echo "<br><p>wachtwoord vergeten? <a href='account/forgotpasswordpage.php'>Reset wachtwoord</a></p>";
 
 include("../includes/php/bottom.php");
 
