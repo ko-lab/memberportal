@@ -7,12 +7,12 @@ include("../includes/php/ldap.php");
 include("../includes/php/top.php");
 
 
-if ($userid == Null) {
+if ($username == Null) {
     echo "<META http-equiv='refresh' content='0;URL=/account/login.php'><p>Log in,</p>";
     include("../includes/php/bottom.php");
 }
 
-// redirect to form onyl
+// redirect to form only
 
 if (empty($_POST)) {
     goto form;
