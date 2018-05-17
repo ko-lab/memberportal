@@ -20,15 +20,15 @@ $lastname  = mysqli_real_escape_string($dbhandle, $lastname);
 $username  = mysqli_real_escape_string($dbhandle, $username);
 
 if ($firstname == NULL) {
-   // echo '<META http-equiv="refresh" content="0;URL=' . $baseurl . 'members/members.php">';
+    echo '<META http-equiv="refresh" content="0;URL=' . $baseurl . 'members/members.php">';
     exit;
 }
 if ($lastname  == NULL) {
-   // echo '<META http-equiv="refresh" content="0;URL=' . $baseurl . 'members/members.php">';
+    echo '<META http-equiv="refresh" content="0;URL=' . $baseurl . 'members/members.php">';
     exit;
 }
 if ($username  == NULL) {
-   // echo '<META http-equiv="refresh" content="0;URL=' . $baseurl . 'members/members.php">';
+    echo '<META http-equiv="refresh" content="0;URL=' . $baseurl . 'members/members.php">';
     exit;
 }
 

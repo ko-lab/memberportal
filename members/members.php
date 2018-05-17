@@ -25,7 +25,7 @@ echo "<div class='table-responsive'><table class='table table-striped'><thead><t
 if ($bind = ldap_bind($ldaplogin, $usernamecn, $password)) {
     
     $search_filter = '(|(objectClass=inetOrgPerson))';
-    $attr = array("memberof","displayName","uidNumber");
+    $attr = array("memberof","displayName","uidNumber","uid");
     
     $result = ldap_search($ldaplogin, $memberouldap, $search_filter, $attr) or exit("Unable to search LDAP server");
     
@@ -39,7 +39,36 @@ if ($bind = ldap_bind($ldaplogin, $usernamecn, $password)) {
             
             if($Admin == 1) {
                 
-                echo '<a class="btn btn-primary btn-xs" href="members/memeber.php?uid=' . $entries[$x]['uidnumber'][0] . '">Bewerk</a>';
+                echo '<a class="btn btn-danger btn-xs" href="members/memberdisable.php?uid=' . $entries[$x]['uid'][0] . '"><i class="fa fa-ban" aria-hidden="true"></i> Blokkeer</a>';
+                
+            }
+            
+            echo ' </td><td>' . $entries[$x]['displayname'][0] . '</tr>';
+            
+        }
+        
+    }
+    
+}
+
+if ($bind = ldap_bind($ldaplogin, $usernamecn, $password)) {
+    
+    $search_filter = '(|(objectClass=inetOrgPerson))';
+    $attr = array("memberof","displayName","uidNumber","uid");
+    
+    $result = ldap_search($ldaplogin, $oldmemberouldap, $search_filter, $attr) or exit("Unable to search LDAP server");
+    
+    if (FALSE !== $result){
+        
+        $entries = ldap_get_entries($ldaplogin, $result);
+        
+        for ($x=0; $x<$entries['count']; $x++){
+            
+            echo '<tr><td>';
+            
+            if($Admin == 1) {
+                
+                echo '<a class="btn btn-danger btn-xs" href="members/memberenable.php?uid=' . $entries[$x]['uid'][0] . '"><i class="fa fa-check" aria-hidden="true"></i> Deblokkeer</a>';
                 
             }
             

@@ -16,7 +16,8 @@ $portldap = ''; // Ldap host
 $userldap = ''; // Ldap user
 $passldap = ''; // Ldap password
 
-$memberouldap = ''; // Ldap user
+$memberouldap = 'ou=members,dc=internal,dc=ko-lab,dc=space'; // Ldap user
+$oldmemberouldap = 'ou=oldmembers,dc=internal,dc=ko-lab,dc=space'; // Ldap user
 
 
 
